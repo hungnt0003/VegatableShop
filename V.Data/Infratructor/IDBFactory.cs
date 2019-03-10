@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace V.Model
+namespace V.Data.Infratructor
 {
-    public class Class1
+    public interface IDbFactory:IDisposable
     {
+        VDbContext Init();
     }
 }

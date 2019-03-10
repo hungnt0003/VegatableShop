@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace V.Model.Models
 {
     [Table("Postags")]
-    internal class PostTag
+    public class PostTag
     {
         [Key]
         public int PostID { set; get; }

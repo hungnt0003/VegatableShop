@@ -48,18 +48,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Infratructor\DbFacroty.cs" />
+    <Compile Include="Infratructor\Disposable.cs" />
+    <Compile Include="Infratructor\IDbFactory.cs" />
+    <Compile Include="Infratructor\IRepository.cs" />
+    <Compile Include="Infratructor\IUnitOfWork.cs" />
+    <Compile Include="Infratructor\RepositoryBase.cs" />
+    <Compile Include="Infratructor\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\V.Common\V.Common.csproj">
       <Project>{f419e3fc-85b0-4e6e-8b30-c27644188344}</Project>
       <Name>V.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\V.Model\V.Model.csproj">
+      <Project>{48134b1a-3698-4f3c-807c-bedaa6f04748}</Project>
+      <Name>V.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
