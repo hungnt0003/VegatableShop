@@ -3,19 +3,21 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace V.Model.Models
 {
-    [Table("Postags")]
+    [Table("PostTags")]
     public class PostTag
     {
         [Key]
+        [Column(Order = 1)]
         public int PostID { set; get; }
 
         [Key]
+        [Column(TypeName = "varchar", Order = 2)]
         [MaxLength(50)]
-        [Column(TypeName ="varchar")]
         public string TagID { set; get; }
 
         [ForeignKey("PostID")]
         public virtual Post Post { set; get; }
+
         [ForeignKey("TagID")]
         public virtual Tag Tag { set; get; }
     }

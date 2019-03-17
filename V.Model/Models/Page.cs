@@ -9,16 +9,21 @@ using System.Threading.Tasks;
 namespace V.Model.Models
 {
     [Table("Pages")]
-    public class Page:Auditable
+    public class Page : Auditable
     {
         [Key]
-        [MaxLength(50)]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
+
         [Required]
         [MaxLength(256)]
         public string Name { set; get; }
+
+        [Column(TypeName = "varchar")]
+        [MaxLength(256)]
         [Required]
-        public string content { set; get; }
+        public string Alias { set; get; }
+
+        public string Content { set; get; }
     }
 }

@@ -7,12 +7,11 @@ namespace V.Model.Models
     public class SupportOnline
     {
         [Key]
-        [MaxLength(50)]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public string ID { set; get; }
+        public int ID { set; get; }
 
         [Required]
-        [MaxLength(256)]
+        [MaxLength(50)]
         public string Name { set; get; }
 
         [MaxLength(50)]
@@ -22,7 +21,7 @@ namespace V.Model.Models
         public string Skype { set; get; }
 
         [MaxLength(50)]
-        public string Tel { set; get; }
+        public string Mobile { set; get; }
 
         [MaxLength(50)]
         public string Email { set; get; }
@@ -33,7 +32,8 @@ namespace V.Model.Models
         [MaxLength(50)]
         public string Facebook { set; get; }
 
+        public bool Status { set; get; }
+
         public int? DisplayOrder { set; get; }
-        public bool? Status { set; get; }
     }
 }

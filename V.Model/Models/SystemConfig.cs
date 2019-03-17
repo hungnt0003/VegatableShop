@@ -12,14 +12,16 @@ namespace V.Model.Models
     public class SystemConfig
     {
         [Key]
-        [MaxLength(50)]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
+
         [Required]
+        [Column(TypeName = "varchar")]
         [MaxLength(50)]
         public string Code { set; get; }
-        [Required]
+
         [MaxLength(50)]
-        public string Value { set; get; }
+        public string ValueString { set; get; }
+
+        public int? ValueInt { set; get; }
     }
 }

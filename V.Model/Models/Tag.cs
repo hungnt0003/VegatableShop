@@ -13,11 +13,15 @@ namespace V.Model.Models
     {
         [Key]
         [MaxLength(50)]
-        [Column(TypeName ="varchar")]
+        [Column(TypeName = "varchar")]
         public string ID { set; get; }
+
+        [MaxLength(50)]
         [Required]
         public string Name { set; get; }
+
+        [MaxLength(50)]
         [Required]
-        public int Type { set; get; }
+        public string Type { set; get; }
     }
 }

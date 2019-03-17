@@ -12,7 +12,6 @@ namespace V.Model.Models
     public class MenuGroup
     {
         [Key]
-        [MaxLength(50)]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
 

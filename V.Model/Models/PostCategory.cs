@@ -8,7 +8,6 @@ namespace V.Model.Models
     public class PostCategory : Auditable
     {
         [Key]
-        [MaxLength(50)]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
 
@@ -17,8 +16,8 @@ namespace V.Model.Models
         public string Name { set; get; }
 
         [Required]
-        [MaxLength(256)]
         [Column(TypeName = "varchar")]
+        [MaxLength(256)]
         public string Alias { set; get; }
 
         [MaxLength(500)]

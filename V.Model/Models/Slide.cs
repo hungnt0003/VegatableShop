@@ -12,21 +12,26 @@ namespace V.Model.Models
     public class Slide
     {
         [Key]
-        [MaxLength(50)]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
+
         [Required]
         [MaxLength(256)]
         public string Name { set; get; }
-        [Required]
+
         [MaxLength(256)]
         public string Description { set; get; }
+
         [MaxLength(256)]
         public string Image { set; get; }
-        [Required]
+
         [MaxLength(256)]
-        public string URL { set; get; }
+        public string Url { set; get; }
+
         public int? DisplayOrder { set; get; }
-        public bool? Status { set; get; }
+
+        public bool Status { set; get; }
+
+        public string Content { set; get; }
     }
 }

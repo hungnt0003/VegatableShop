@@ -9,14 +9,15 @@ using System.Threading.Tasks;
 namespace V.Model.Models
 {
     [Table("VisitorStatistics")]
-    public class VisitorStatistics
+    public class VisitorStatistic
     {
         [Key]
-        [MaxLength(50)]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID { set; get; }
+        public Guid ID { set; get; }
+
         [Required]
-        public DateTime VisitorDate { set; get; }
+        public DateTime VisitedDate { set; get; }
+
+        [MaxLength(50)]
         public string IPAddress { set; get; }
     }
 }
