@@ -8,7 +8,7 @@ using V.Model.Models;
 
 namespace V.Data.Repositories
 {
-    public interface IContactDetailRepository
+    public interface IContactDetailRepository:IRepository<ContactDetail>
     {
     }
 

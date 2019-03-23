@@ -3,7 +3,7 @@ using V.Model.Models;
 
 namespace V.Data.Repositories
 {
-    public interface IMenuGroupRepository
+    public interface IMenuGroupRepository : IRepository<MenuGroup>
     {
     }
 

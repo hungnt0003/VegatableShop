@@ -8,7 +8,7 @@ using V.Model.Models;
 
 namespace V.Data.Repositories
 {
-    public interface IFeedbackRepository
+    public interface IFeedbackRepository : IRepository<Feedback>
     {
     }
 

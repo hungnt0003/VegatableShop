@@ -3,7 +3,7 @@ using V.Model.Models;
 
 namespace V.Data.Repositories
 {
-    public interface IOrderRepository
+    public interface IOrderRepository : IRepository<Order>
     {
     }
 

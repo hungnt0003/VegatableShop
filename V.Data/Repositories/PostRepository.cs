@@ -3,7 +3,7 @@ using V.Model.Models;
 
 namespace V.Data.Repositories
 {
-    public interface IPostRepository
+    public interface IPostRepository : IRepository<Post>
     {
     }
 
